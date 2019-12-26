@@ -1,0 +1,91 @@
+body {background-color: #2A2A2A;}
+/*body {background-color: coral;}*/
+h1   {color: #7F21F9;}
+p    {color: red;}
+body {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+}
+nav {
+  background-color: #2F2F2F;
+  list-style-type:none;
+  text-align:center;
+  margin:0;
+  padding:0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    vertical-align: center;
+    margin:10px;
+
+    font-family: "Verdana";
+    color: #0E5AF3;
+    font-size: 23px;
+    padding: 6px 4px;
+    text-decoration: none;
+
+
+
+
+}
+nav ul li a:hover {
+    display: inline-block;
+    font-family: "Verdana";
+    color: #3D7CFA;
+    font-size: 23px;
+    padding: 9px 7px;
+    text-decoration: none;
+
+
+
+}
+
+#menu {
+  margin:0;
+  padding:0;
+}
+
+#menu li {
+  list-style:none;
+  display: inline-block;
+}
+
+#menu li a {
+  text-decoration: none;
+  position: relative;
+  color: #0E5AF3;
+  font-size: 23px;
+  font-family: "Verdana";
+  display: block;
+  vertical-align: center;
+  transition: 0.7s all;
+
+  overflow:hidden;
+  padding: 9px 7px;
+
+
+
+
+}
+
+#menu li a:before{
+  content: '__';
+  width: 60px;
+
+  position: absolute;
+  border-color: #3D7CFA;
+  border-bottom: 5px solid;
+  bottom 0;
+  right: 350px;
+  transition: 0.7s all;
+}
+
+#menu li a:hover:before {
+  right: 0;
+}
