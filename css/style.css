@@ -68,7 +68,7 @@ nav {
     }
 }
 
-@media screen and (min-width: 360px) and (max-width:768px){
+@media screen and (min-width: 360px) and (max-width:1024px){
     .nav-links {
         position: absolute;
         right: 0px;
