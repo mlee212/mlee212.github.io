@@ -1,91 +1,109 @@
-body {background-color: #2A2A2A;}
-/*body {background-color: coral;}*/
-h1   {color: #7F21F9;}
-p    {color: red;}
-body {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment:fixed;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
+
 nav {
-  background-color: #2F2F2F;
-  list-style-type:none;
-  text-align:center;
-  margin:0;
-  padding:0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #2A2A2A;
+    font-family: 'Verdana';
 }
 
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-    display: block;
-    vertical-align: center;
-    margin:10px;
-
-    font-family: "Verdana";
+.name {
     color: #0E5AF3;
-    font-size: 23px;
-    padding: 6px 4px;
+    letter-spacing: 5px;
+    font-size: 20;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #0E5AF3;
     text-decoration: none;
-
-
-
-
-}
-nav ul li a:hover {
-    display: inline-block;
-    font-family: "Verdana";
-    color: #3D7CFA;
-    font-size: 23px;
-    padding: 9px 7px;
-    text-decoration: none;
-
-
-
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 13px;
 }
 
-#menu {
-  margin:0;
-  padding:0;
+.menicon {
+    display: none;
+    cursor: pointer;
 }
 
-#menu li {
-  list-style:none;
-  display: inline-block;
+.menicon div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
 }
 
-#menu li a {
-  text-decoration: none;
-  position: relative;
-  color: #0E5AF3;
-  font-size: 23px;
-  font-family: "Verdana";
-  display: block;
-  vertical-align: center;
-  transition: 0.7s all;
-
-  overflow:hidden;
-  padding: 9px 7px;
-
-
-
-
+@media screen and (max-width:1024px){
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        width: 60%;
+    }
 }
 
-#menu li a:before{
-  content: '__';
-  width: 60px;
-
-  position: absolute;
-  border-color: #3D7CFA;
-  border-bottom: 5px solid;
-  bottom 0;
-  right: 350px;
-  transition: 0.7s all;
+@media screen and (max-width:768px){
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color:#2A2A2A;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .menicon {
+        display: block;
+    }
 }
 
-#menu li a:hover:before {
-  right: 0;
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
